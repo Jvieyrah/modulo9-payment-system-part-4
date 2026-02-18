@@ -22,4 +22,10 @@ public class PaymentRequest {
     @NotNull(message = "Amount is required")
     @Positive(message = "Amount must be positive")
     private BigDecimal amount;
+
+    public PaymentRequest(UUID payerId, PaymentSource paymentSource, BigDecimal amount) {
+        this.payerId = payerId;
+        this.paymentSource = paymentSource;
+        this.amount = amount;
+    }
 }
